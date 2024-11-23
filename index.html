@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nusantara Mart - Interactive Customer Portal</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="hero">
+            <h1>Welcome to Nusantara Mart</h1>
+            <p>Your One-Stop Shopping Solution</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#shop">Shop</a></li>
+                <li><a href="#transactions">Transactions</a></li>
+                <li><a href="#loyalty">Loyalty Points</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Shop Section -->
+        <section id="shop">
+            <h2>Shop Our Products</h2>
+            <div class="product-list">
+                <div class="product">
+                    <img src="https://assets.onecompiler.app/42yhzu7we/42yxjk8bf/gula.jpeg" alt="GULAKU 1 KG white sugar">
+                    <h3>GULAKU 1 KG white sugar</h3>
+                    <p>Price: Rp 22.000</p>
+                    <button onclick="addToCart('GULAKU 1 KG white sugar', Rp 22.000)">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="https://assets.onecompiler.app/42yhzu7we/42yxjk8bf/beras.jpg" alt="Beras Rojolele 10 Kg">
+                    <h3>Beras Rojolele 10 Kg</h3>
+                    <p>Price: Rp 62.500</p>
+                    <button onclick="addToCart('Beras Rojolele 10 Kg', Rp 62.500)">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="https://assets.onecompiler.app/42yhzu7we/42yxjk8bf/minyak.jpg" alt="Minyak Goreng Bimoli 2 Liter">
+                    <h3>Minyak Goreng Bimoli 2 Liter</h3>
+                    <p>Price: Rp 17.000</p>
+                    <button onclick="addToCart('Minyak Goreng Bimoli 2 Liter', Rp 17.000)">Add to Cart</button>
+                </div>
+            </div>
+            <div class="cart-container">
+                <h3>Your Cart</h3>
+                <ul id="cart"></ul>
+                <button class="checkout-btn" onclick="checkout()">Checkout</button>
+            </div>
+        </section>
+
+        <!-- Transactions Section -->
+        <section id="transactions">
+            <h2>Transaction History</h2>
+            <div id="transaction-history" class="transaction-list">
+                <p>No transactions yet.</p>
+            </div>
+        </section>
+
+        <!-- Loyalty Points Section -->
+        <section id="loyalty">
+            <h2>Your Loyalty Points</h2>
+            <div class="loyalty-info">
+                <p>You have <span id="loyalty-points">0</span> loyalty points.</p>
+                <p>Earn points for every $10 spent and redeem them for discounts!</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Nusantara Mart | Designed with ❤️</p>
+    </footer>
+</body>
+</html>
